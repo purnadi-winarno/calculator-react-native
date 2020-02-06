@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing screen renders calculator screen correctly 1`] = `
+<ContextProvider
+  value={null}
+>
+  <Screen
+    onPressButton={[Function]}
+    stack={
+      Array [
+        "0",
+      ]
+    }
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;

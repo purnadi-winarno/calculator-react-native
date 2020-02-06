@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing button renders non square button correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#eee",
+        "borderRadius": 5,
+        "margin": 5,
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingHorizontal": 10,
+        "paddingVertical": 10,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+      }
+    }
+  >
+    7
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`Testing button renders square button correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#eee",
+        "borderRadius": 5,
+        "margin": 5,
+      },
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+      }
+    }
+  >
+    7
+  </Text>
+</TouchableOpacity>
+`;
