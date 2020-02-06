@@ -14,7 +14,7 @@ export default StyleSheet.create({
     fontSize: 60,
     textAlign: "right"
   },
-  resultText: {
+  smallText: {
     fontSize: 20,
     textAlign: "right"
   },

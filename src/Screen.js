@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import { View, Text } from "react-native";
 import Button from "./Button";
 import styles from "./styles";
-import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { NUMBERS, SIGNS } from "./constants";
 import { onPressButton } from "./actions";
@@ -32,10 +31,17 @@ const Screen = ({ stack, onPressButton }) => {
       />
     ));
   }
+  const lastNumber = stack
+    .slice()
+    .reverse()
+    .find(s => /^(-)*\d+[.]*\d*$/.test(s));
   return (
     <View style={styles.container}>
       <View style={styles.inputBox}>
-        <Text style={styles.inputText}>{stack.join("")}</Text>
+        <Text style={styles.inputText}>{lastNumber}</Text>
+        <Text style={styles.smallText}>
+          {stack.length > 1 && stack.join("")}
+        </Text>
       </View>
       <View style={styles.row}>
         <View style={styles.numberButtonContainer}>{_renderNumbers()}</View>
@@ -44,15 +50,10 @@ const Screen = ({ stack, onPressButton }) => {
     </View>
   );
 };
-
 const mapStateToProps = state => ({
   stack: state.calculator.stack
 });
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      onPressButton
-    },
-    dispatch
-  );
+const mapDispatchToProps = {
+  onPressButton
+};
 export default connect(mapStateToProps, mapDispatchToProps)(Screen);
